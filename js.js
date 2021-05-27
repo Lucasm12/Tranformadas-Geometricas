@@ -51,6 +51,22 @@ document.getElementById('transformation').onchange = function(e) {
     }
 };
 
+
+
+// Capiturando os clicks dos botões e ativando as funções conforme btn selecionado
+let $btn = document.querySelectorAll(".btns");
+for(let i = 0; i < $btn.length; i++){
+    $btn[i].addEventListener('click', function(){
+        let btnValor = this.value
+        operation = btnValor
+        update()
+    })
+}
+
+
+
+
+
 // Atualização da tela com objetos atualmente presentes na lista
 function update() {
     context.fillStyle = '#f0f0f0';
