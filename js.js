@@ -59,6 +59,14 @@ for(let i = 0; i < $btn.length; i++){
     $btn[i].addEventListener('click', function(){
         let btnValor = this.value
         operation = btnValor
+        if (operation == 'draw'){
+            unlockDraw = true;
+        } 
+        if (operation == 'reflect'){
+            show();
+        } else{
+            hide();
+        }
         update()
     })
 }
